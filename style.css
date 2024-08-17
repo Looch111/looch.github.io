@@ -1,0 +1,259 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, #000000, #1a1a1a, #333333); /* Dark radial gradient background */
+    color: #e0e0e0; /* Light text for contrast */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Styles */
+.container {
+    background: rgba(20, 20, 20, 0.9); /* Dark, semi-transparent background */
+    border: 2px solid #00ff00; /* Neon green border */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8); /* Green neon glow */
+    padding: 20px;
+    max-width: 90%; /* Max width of 90% of the viewport */
+    width: 100%; /* Full width of its parent container */
+    margin: 20px auto; /* Center horizontally with vertical margin */
+    text-align: center;
+}
+
+/* Header Styles */
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em; /* Responsive font size */
+    color: #00ff00; /* Neon green text */
+    text-shadow: 0 0 5px #00ff00; /* Glowing effect */
+}
+
+/* Grid Container Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid with flexible column sizes */
+    gap: 8px; /* Reduced gap between items */
+    margin-bottom: 15px;
+}
+
+/* Game Option Styles */
+.game-option {
+    border: 1px solid #444;
+    border-radius: 8px; /* Curved edges */
+    padding: 8px; /* Padding for better touch targets */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+    background: rgba(30, 30, 30, 0.8); /* Slightly transparent dark background */
+    width: 100%; /* Full width of its grid cell */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.game-option img {
+    width: 100%;
+    border-radius: 6px; /* Curved edges for images */
+    margin-bottom: 4px; /* Reduced margin below image */
+}
+
+.game-option p {
+    font-weight: 500;
+    color: #aaa;
+    font-size: 0.9em; /* Responsive font size */
+}
+
+.game-option:hover, .game-option.selected {
+    transform: scale(1.05);
+    border-color: #00ff00; /* Neon green border on hover */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #aaa;
+}
+
+/* Key Slider Styles */
+.key-slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.key-slider input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #444;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.key-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #00ff00;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.key-slider input[type="range"]:hover::-webkit-slider-thumb {
+    background: #00cc00;
+}
+
+#keyValue {
+    font-size: 1em; /* Responsive font size */
+    font-weight: bold;
+    color: #00ff00;
+}
+
+/* Button Styles */
+button {
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    padding: 10px 18px;
+    font-size: 0.9em; /* Responsive font size */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #00cc00;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+    height: 30px;
+    position: relative;
+}
+
+.progress-bar div {
+    height: 100%;
+    background-color: #00ff00;
+    width: 0;
+    transition: width 0.5s;
+}
+
+#progressText {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Key Item Styles */
+.key-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.key-item input {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.9em; /* Responsive font size */
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #222;
+    color: #e0e0e0;
+}
+
+.copyKeyBtn {
+    background-color: #28a745;
+    border: none;
+    padding: 10px 18px;
+    color: white;
+    font-size: 0.9em; /* Responsive font size */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.copyKeyBtn:hover {
+    background-color: #218838;
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 20px;
+    font-size: 0.75em; /* Responsive font size */
+    color: #777;
+}
+
+#copyStatus {
+    margin-top: 10px;
+    color: green;
+}
+
+/* Ensure the page is scrollable */
+html, body {
+    height: auto; /* Allow body to grow based on content */
+    min-height: 100%; /* Ensure it covers at least the viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Increase width on smaller screens */
+    }
+
+    h1 {
+        font-size: 1.25em; /* Adjust font size */
+    }
+
+    .game-option {
+        width: 100%; /* Ensure full width of its grid cell */
+    }
+
+    .key-slider input[type="range"]::-webkit-slider-thumb {
+        width: 18px; /* Slightly smaller slider thumb */
+        height: 18px;
+    }
+
+    button, .copyKeyBtn {
+        font-size: 0.85em; /* Adjust button font size */
+    }
+
+    .footer {
+        font-size: 0.65em; /* Adjust footer font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .game-option {
+        width: 100%; /* Ensure full width on very small screens */
+        padding: 6px; /* Further reduce padding */
+    }
+
+    h1 {
+        font-size: 1.1em; /* Adjust font size for very small screens */
+    }
+
+    .key-slider input[type="range"]::-webkit-slider-thumb {
+        width: 16px; /* Even smaller slider thumb */
+        height: 16px;
+    }
+}
